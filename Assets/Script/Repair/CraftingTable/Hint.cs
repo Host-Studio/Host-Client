@@ -71,10 +71,10 @@ namespace Repair
             string tOwnerName = "";
 
             // 마지막 공백 제외
-            string strCsvWeapon = csvHint.text.Substring(0, csvHint.text.Length - 1);
+            string strCsvHint = csvHint.text.Substring(0, csvHint.text.Length - 1);
 
             // 줄바꿈(한 줄)을 기준으로 csv 파일을 쪼개서 string배열에 줄 순서대로 담음
-            string[] rows = strCsvWeapon.Split(new char[] { '\n' });
+            string[] rows = strCsvHint.Split(new char[] { '\n' });
             string[] nameList;
 
             // 엑셀 파일 2번째 줄부터 시작
@@ -89,9 +89,9 @@ namespace Repair
                 {
                     tempChar = rows[i][c];
 
-                    // 다음 쉼표 발견할 때까지 붙여넣기
                     if (tempChar == ',')
                     {
+                        // 한 column의 파싱이 끝남
                         if(end)
                         {
                             rowValues[column++] = string.Copy(tempStr);
@@ -100,7 +100,8 @@ namespace Repair
                         }
                     }
 
-                    // 따옴표 발견하면 다음 따옴표까지 붙여넣기
+                    // 따옴표가 있으면 문장 내에 콤마가 있다는 의미이므로
+                    // 다음 따옴표가 등장하기 전까지 파싱을 계속한다.
                     if (tempChar == '\"')
                     {
                         end = !end;

@@ -1,0 +1,3 @@
+﻿ID,Start_Dialogue_ID,Encounter_Type,Encounter_Condition,Condition_Count,Item1_Id,Item1_Count,Item2_Id,Item2_Count,Item3_Id,Item3_Count,Item4_Id,Item4_Count
+int,int,int,int,int,int,int,int,int,int,int,int,int
+10000,1001000,0,0,10,1001,900,2001,100,3002,1,4001,3

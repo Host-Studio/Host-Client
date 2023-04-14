@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GuestManager : MonoBehaviour
 {
-    // private List<string> nameList = new List<string>() { "발라드", "이안하트", "디르크", "무에르테", "샤카" };
     private List<string> nameList = new List<string>() { "발라드", "이안하트", "디르크", "샤카", "마르코", "톨문드" };
 
     // 직업-인장
