@@ -2271,8 +2271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd824d23cc3c80443ac84921b9d2bf38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueCSV: {fileID: 0}
-  dialogueInfoCSV: {fileID: 0}
+  dialogueCSV: {fileID: 4900000, guid: 033be2576ccf9794db49b2b572260ed9, type: 3}
+  dialogueInfoCSV: {fileID: 4900000, guid: 090d7e15f485d7b44ab175a4053dab4e, type: 3}
 --- !u!4 &627577635
 Transform:
   m_ObjectHideFlags: 0
