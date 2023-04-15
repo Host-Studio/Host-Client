@@ -30,9 +30,9 @@ public class StoryMain : SceneMain
 
         DataManager.instance.Init();
         DataManager.instance.LoadUserData("0");
-        DataManager.instance.UserData.gold++;
+        //DataManager.instance.UserData.gold++;
         DataManager.instance.SaveGame();
-        Debug.Log(DataManager.instance.UserData.gold);
+        //Debug.Log(DataManager.instance.UserData.gold);
     }
 
     public override void Init(SceneParams param = null)
