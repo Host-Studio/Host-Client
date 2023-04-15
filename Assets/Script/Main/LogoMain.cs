@@ -14,7 +14,6 @@ public class LogoMain : SceneMain
     private IEnumerator ShowLogoRoutine()
     {
         yield return YieldInstructionCache.WaitForSeconds(2f);
-
-        this.Dispatch("onShowLogoComplete");
+        App.instance.LoadScene<LoadingMain>(App.eSceneType.Loading);
     }
 }

@@ -15,7 +15,6 @@ public class TitleMain : SceneMain
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
 
         this.StopAllCoroutines();
-
-        this.Dispatch("onClick");
+        App.instance.LoadScene<StoryMain>(App.eSceneType.Story);
     }
 }
