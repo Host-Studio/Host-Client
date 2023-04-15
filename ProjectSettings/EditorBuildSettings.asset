@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/App.unity
+    guid: fd6da86eeb22b9944ae9e65fdcdda3e7
+  - enabled: 1
+    path: Assets/Scenes/Logo.unity
+    guid: d6fc0792f232e8343914dffda98848bc
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: 15607f78d8b01804e98d3acbc4e84d72
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 48467c19981290a408c3e05886fed259
+  - enabled: 1
+    path: Assets/Scenes/Story.unity
+    guid: cfe21fc0a19e99542b0e1b2ddb4e02c0
+  - enabled: 1
+    path: Assets/Scenes/Cook.unity
+    guid: 0950a4936af084a4b8b8f92f3a32b925
+  - enabled: 1
     path: Assets/Scenes/Hospitality.unity
     guid: 78c4c97365c60d840bbda13f0c17c566
   - enabled: 1

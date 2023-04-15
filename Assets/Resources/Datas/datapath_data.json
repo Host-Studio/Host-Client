@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "res_name": "cutscenedb_data",
+    "type": "CutsceneDBData"
+  },
+  {
+    "id": 1,
+    "res_name": "cutscengroup_data",
+    "type": "CutscenGroupData"
+  },
+  {
+    "id": 2,
+    "res_name": "dialoguedb_data",
+    "type": "DialogueDBData"
+  },
+  {
+    "id": 3,
+    "res_name": "visitdb_data",
+    "type": "VisitDBData"
+  }
+]
