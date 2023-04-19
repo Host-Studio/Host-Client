@@ -32,7 +32,7 @@ public class SceneMain : MonoBehaviour, IEventDispatcher
     private void OnDestroy()
     {
         if (this.useOnDestoryEvent)
-            this.onDestroy.Invoke();
+            this.onDestroy?.Invoke();
     }
 
 }

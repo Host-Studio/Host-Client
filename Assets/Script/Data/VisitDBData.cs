@@ -12,6 +12,8 @@
 
 public class VisitDBData : GameMetaData
 {
+    public int group_id; // 임시 추가
+
     public int dialogue_type;
     
     public int encounter_type;

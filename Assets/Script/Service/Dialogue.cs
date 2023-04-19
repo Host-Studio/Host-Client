@@ -1,40 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 
-class Service : SceneMain
+class Dialogue : MonoBehaviour
 {
     private void Start()
     {
-        if (App.instance == null)
-        {
-            SpecDataManager.instance.onDataLoadFinished.AddListener(() =>
-            {
-                Init();
-            });
-            SpecDataManager.instance.Init(this);
-        }
-
         myRotation = Quaternion.Euler(new Vector3(0, 180, 0));
-    }
-
-    public override void Init(SceneParams param = null)
-    {
-        SpecDataManager.instance.DialogueDBDatas[0].id = 1;
-
 
         _dialogueDBDatas = SpecDataManager.instance.DialogueDBDatas.FindAll(x => 1000 < x.group_id && x.group_id < 2000).ToList();
     }
-
     public IEnumerator GuestDialogueCoroutine(int group_id, int dialogueType = 0)
     {
         // 새로운 모험가 방문 -> 이전 모험가와의 대화 삭제
         if (dialogueType == 0) DeleteSpeechBubble();
 
         // 필요한 대화 그룹 로딩
-        List<DialogueDBData> dialogueDatas = _dialogueDBDatas.FindAll(x => x.group_id == group_id).ToList();
+        List<DialogueDBData> dialogueDatas = _dialogueDBDatas.FindAll(x => x.group_id == group_id && x.dialogue_type == dialogueType).ToList();
 
         foreach (DialogueDBData dialogueData in dialogueDatas)
         {
@@ -59,6 +44,17 @@ class Service : SceneMain
 
             yield return new WaitForSeconds(spawnTime);
         }
+    }
+
+    public int GetRandomGroupID()
+    {
+        int group_id;
+
+        System.Random rand = new System.Random();
+        int idx = rand.Next(_dialogueDBDatas.FindLastIndex(x => x.group_id >= 3000) - _dialogueDBDatas.FindIndex(x => x.group_id >= 3000));
+        group_id = _dialogueDBDatas[idx + 3000].group_id;
+
+        return group_id;
     }
 
     /////////////////// private

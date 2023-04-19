@@ -17,7 +17,7 @@ public class LoadingMain : SceneMain
 
         SpecDataManager.instance.onDataLoadFinished.AddListener(() => 
         {
-            this.Dispatch("onLoadComplete");
+            App.instance.LoadScene<TitleMain>(App.eSceneType.Title);
         });
         SpecDataManager.instance.Init(App.instance);
     }
