@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Hospitality.unity
     guid: 78c4c97365c60d840bbda13f0c17c566
   - enabled: 1
+    path: Assets/Scenes/Calculate.unity
+    guid: b2d7ab1bd3e5a91418c59c8b3dcf92c1
+  - enabled: 1
     path: Assets/Scenes/RestingPlace.unity
     guid: dc0664fc186b0f04493723c9ab64676e
   m_configObjects: {}

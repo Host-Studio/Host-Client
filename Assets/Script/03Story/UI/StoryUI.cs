@@ -25,4 +25,9 @@ public class StoryUI : MonoBehaviour
     {
         _workBtn.gameObject.SetActive(true);
     }
+
+    public void OnClickWorkBtn()
+    {
+        App.instance.LoadScene<CalculateMain>(App.eSceneType.Calculate);
+    }
 }

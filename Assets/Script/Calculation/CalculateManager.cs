@@ -19,8 +19,8 @@ public class CalculateManager : MonoBehaviour
     public void LoadData()
     {
         // 오늘 데이터
-        date = DataController.Instance.gameData.date;
-        gold_old = DataController.Instance.gameData.gold;
+        //date = DataController.Instance.gameData.date;
+        //gold_old = DataController.Instance.gameData.gold;
         correct = HospitalityScore.Instance.correctAnswer;
         wrong = HospitalityScore.Instance.wrongAnswer;
 
@@ -31,7 +31,7 @@ public class CalculateManager : MonoBehaviour
     // 정산 화면에서 
     public void UpdateGold(int gold)
     {
-        DataController.Instance.gameData.UpdateGold(gold);
+        //DataController.Instance.gameData.UpdateGold(gold);
     }
 
 

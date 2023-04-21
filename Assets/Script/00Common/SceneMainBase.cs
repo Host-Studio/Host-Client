@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SceneMain : MonoBehaviour, IEventDispatcher
+public abstract class SceneMainBase : MonoBehaviour, IEventDispatcher
 {
     private EventDispatcher eventDispatcher = new EventDispatcher();
     public UnityEvent onDestroy = new UnityEvent();

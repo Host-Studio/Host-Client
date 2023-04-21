@@ -96,7 +96,7 @@ public class HostManager : MonoBehaviour
 
     public void UpdateDate()
     {
-        DataController.Instance.gameData.UpdateDate();    // 날짜 업데이트
+        //DataController.Instance.gameData.UpdateDate();    // 날짜 업데이트
     }
 
     public void SendIdentity(bool _decision)

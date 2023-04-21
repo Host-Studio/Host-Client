@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CookMain : SceneMainBase
+public abstract class UIBase : MonoBehaviour
 {
-    public override void Init(SceneParams param = null)
+    public virtual void Init()
     {
 
     }

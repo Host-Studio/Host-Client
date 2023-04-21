@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using System.Linq;
 
-public class StoryMain : SceneMain
+public class StoryMain : SceneMainBase
 {
     public StoryUI storyUI;
     public RectTransform _closeUpCamera;
@@ -16,6 +16,7 @@ public class StoryMain : SceneMain
     private int _msgIdx = 0;
 
     private bool isCloseUp = false;
+    private bool ready = false;
 
     private void Start()
     {
@@ -40,7 +41,7 @@ public class StoryMain : SceneMain
         storyUI.Init();
 
         SpecDataManager.instance.DialogueDBDatas[0].id = 1;
-
+        ready = true;
 
         _dialogueDBDatas = SpecDataManager.instance.DialogueDBDatas.FindAll(x => x.group_id == 2000).ToList();
     }
@@ -52,7 +53,7 @@ public class StoryMain : SceneMain
 
     private void Update()
     {
-        if (isCloseUp)
+        if (isCloseUp || !ready)
             return;
 
         if (Input.GetMouseButtonDown(0))
@@ -91,10 +92,6 @@ public class StoryMain : SceneMain
         yield return null;
     }
 
-    public void OnClickWorkBtn()
-    {
-        Dispatch("onClickWorkBtn");
-    }
 
 
 }

@@ -5,12 +5,12 @@ public class App : MonoBehaviour
 {
     public enum eSceneType
     {
-        App, Logo, Loading, Title, Story, Cook, Hospitality
+        App, Logo, Loading, Title, Story, Cook, Hospitality, Calculate
     }
 
     public static App instance;
 
-    private UIApp uiApp;
+    private AppUI uiApp;
 
     private void Awake()
     {
@@ -21,7 +21,7 @@ public class App : MonoBehaviour
 
     private void Start()
     {
-        this.uiApp = GameObject.FindObjectOfType<UIApp>();
+        this.uiApp = GameObject.FindObjectOfType<AppUI>();
         this.uiApp.Init();
 
         this.LoadScene<LogoMain>(eSceneType.Logo);
@@ -29,7 +29,7 @@ public class App : MonoBehaviour
 
 
     public void LoadScene<T>(eSceneType sceneType, float fadeOutTime = 0.5f, 
-        float fadeInTime = 2f, SceneParams param = null) where T : SceneMain
+        float fadeInTime = 2f, SceneParams param = null) where T : SceneMainBase
     {
         var idx = (int)sceneType;
 
@@ -41,8 +41,10 @@ public class App : MonoBehaviour
 
                 this.uiApp.FadeIn(fadeInTime, () =>
                 {
+                    uiApp.Hide();
                     main.Init(param);
                 });
+                
             };
         });
     }

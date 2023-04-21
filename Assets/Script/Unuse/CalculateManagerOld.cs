@@ -18,10 +18,10 @@ public class CalculateManagerOld : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dateText.text = DataController.Instance.gameData.date.ToString();
-        correctText.text = HospitalityScore.Instance.correctAnswer.ToString();
-        wrongText.text = HospitalityScore.Instance.wrongAnswer.ToString();
-        goldText.text = DataController.Instance.gameData.gold.ToString();
+        //dateText.text = DataController.Instance.gameData.date.ToString();
+        //correctText.text = HospitalityScore.Instance.correctAnswer.ToString();
+        //wrongText.text = HospitalityScore.Instance.wrongAnswer.ToString();
+        //goldText.text = DataController.Instance.gameData.gold.ToString();
     }
 
     // ����ȭ�� �̵� ��ư Ŭ��
@@ -44,8 +44,8 @@ public class CalculateManagerOld : MonoBehaviour
     // ��� ����
     private void UpdateGold()
     {
-        int gold = HospitalityScore.Instance.correctAnswer * correctGold - HospitalityScore.Instance.wrongAnswer * wrongGold; // ��� ������
-        DataController.Instance.gameData.UpdateGold(gold);                  // ��� ������Ʈ
-        goldText.text = DataController.Instance.gameData.gold.ToString();   // ���ŵ� ��� ǥ��
+        //int gold = HospitalityScore.Instance.correctAnswer * correctGold - HospitalityScore.Instance.wrongAnswer * wrongGold; // ��� ������
+        //DataController.Instance.gameData.UpdateGold(gold);                  // ��� ������Ʈ
+        //goldText.text = DataController.Instance.gameData.gold.ToString();   // ���ŵ� ��� ǥ��
     }
 }

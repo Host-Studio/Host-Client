@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TitleMain : SceneMain
+public class TitleMain : SceneMainBase
 {
     public override void Init(SceneParams param = null)
     {
