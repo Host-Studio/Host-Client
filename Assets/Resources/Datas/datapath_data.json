@@ -18,5 +18,20 @@
     "id": 3,
     "res_name": "visitdb_data",
     "type": "VisitDBData"
+  },
+  {
+    "id": 4,
+    "res_name": "class_data",
+    "type": "ClassData"
+  },
+  {
+    "id": 5,
+    "res_name": "local_data",
+    "type": "LocalData"
+  },
+  {
+    "id": 6,
+    "res_name": "party_data",
+    "type": "PartyData"
   }
 ]

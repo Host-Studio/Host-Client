@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using UnityEngine;
@@ -15,10 +16,13 @@ public class SpecDataManager
     public UnityEvent<string, float> onDataLoadComplete = new UnityEvent<string, float>();
     public UnityEvent onDataLoadFinished = new UnityEvent();
 
-    public List<CutsceneDBData> CutsceneDBDatas => _cutsceneDBDatas;
-    public List<CutscenGroupData> CutscenGroupDatas => _cutscenGroupDatas;
-    public List<DialogueDBData> DialogueDBDatas => _dialogueDBDatas;
-    public List<VisitDBData> VisitDBDatas => _visitDBDatas;
+    public ReadOnlyCollection<CutsceneDBData> CutsceneDBDatas => _cutsceneDBDatas.AsReadOnly();
+    public ReadOnlyCollection<CutscenGroupData> CutscenGroupDatas => _cutscenGroupDatas.AsReadOnly();
+    public ReadOnlyCollection<DialogueDBData> DialogueDBDatas => _dialogueDBDatas.AsReadOnly();
+    public ReadOnlyCollection<VisitDBData> VisitDBDatas => _visitDBDatas.AsReadOnly();
+    public ReadOnlyCollection<ClassData> ClassDatas => _classDatas.AsReadOnly();
+    public ReadOnlyCollection<LocalData> LocalDatas => _localDatas.AsReadOnly();
+    public ReadOnlyCollection<PartyData> PartyDatas => _partyDatas.AsReadOnly();
 
 
 
@@ -28,6 +32,9 @@ public class SpecDataManager
     private List<CutscenGroupData> _cutscenGroupDatas = new List<CutscenGroupData>();
     private List<DialogueDBData> _dialogueDBDatas = new List<DialogueDBData>();
     private List<VisitDBData> _visitDBDatas = new List<VisitDBData>();
+    private List<ClassData> _classDatas = new List<ClassData>();
+    private List<LocalData> _localDatas = new List<LocalData>();
+    private List<PartyData> _partyDatas = new List<PartyData>();
 
     private SpecDataManager()
     {
@@ -95,6 +102,21 @@ public class SpecDataManager
         req = Resources.LoadAsync<TextAsset>(path);
         asset = (TextAsset)req.asset;
         _visitDBDatas = JsonConvert.DeserializeObject<VisitDBData[]>(asset.text).ToList();
+
+        path = string.Format("Datas/{0}", _dataPaths[4].res_name);
+        req = Resources.LoadAsync<TextAsset>(path);
+        asset = (TextAsset)req.asset;
+        _classDatas = JsonConvert.DeserializeObject<ClassData[]>(asset.text).ToList();
+
+        path = string.Format("Datas/{0}", _dataPaths[5].res_name);
+        req = Resources.LoadAsync<TextAsset>(path);
+        asset = (TextAsset)req.asset;
+        _localDatas = JsonConvert.DeserializeObject<LocalData[]>(asset.text).ToList();
+
+        path = string.Format("Datas/{0}", _dataPaths[6].res_name);
+        req = Resources.LoadAsync<TextAsset>(path);
+        asset = (TextAsset)req.asset;
+        _partyDatas = JsonConvert.DeserializeObject<PartyData[]>(asset.text).ToList();
 
         yield return null;
         this.onDataLoadFinished.Invoke();

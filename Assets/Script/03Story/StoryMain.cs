@@ -43,7 +43,8 @@ public class StoryMain : SceneMainBase
         SpecDataManager.instance.DialogueDBDatas[0].id = 1;
         ready = true;
 
-        _dialogueDBDatas = SpecDataManager.instance.DialogueDBDatas.FindAll(x => x.group_id == 2000).ToList();
+        //_dialogueDBDatas = SpecDataManager.instance.DialogueDBDatas.FindAll(x => x.group_id == 2000).ToList();
+        _dialogueDBDatas = SpecDataManager.instance.DialogueDBDatas.ToList().FindAll(x => x.group_id == 2000).ToList();
     }
 
 
