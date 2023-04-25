@@ -6,3 +6,9 @@ public enum BallardJournallItemType
     Party,
     Class
 }
+
+public enum BallardJournalIndexType
+{
+    Index,
+    Local,
+}

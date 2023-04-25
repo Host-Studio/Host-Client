@@ -6,14 +6,21 @@ using UnityEngine.UI;
 
 public class BallardJournal : MonoBehaviour
 {
+    [System.Serializable]
+    private class BallardJournalIndex
+    {
+        // 인덱스 이름
+        public BallardJournalIndexType indexType;
+        // 페이지 저장
+        public int page;
+    }
+
     ////////////////////////////////////////////////////////
     // public
     public void OnClickLeftArea()
     {
         if (_currentPage == 0 || _currentPage == 1)
             return;
-
-        Debug.Log("_currentPage : " + _currentPage);
 
         _ballardJournalItems[_currentPage].Hide();
         _ballardJournalItems[_currentPage + 1].Hide();
@@ -29,8 +36,6 @@ public class BallardJournal : MonoBehaviour
         if (_currentPage == _lastPage || _currentPage == _lastPage-1)
             return;
 
-        Debug.Log("_currentPage : " + _currentPage);
-
         _ballardJournalItems[_currentPage].Hide();
         _ballardJournalItems[_currentPage+1].Hide();
 
@@ -43,25 +48,25 @@ public class BallardJournal : MonoBehaviour
 
     public void OnClickCountry()
     {
-        _currentPage = 3;
+        GoToIndex(BallardJournalIndexType.Local);
         Refresh();
     }
 
     public void OnClickCook()
     {
-        _currentPage = 6;
+        //_currentPage = 6;
         Refresh();
     }
 
     public void OnClickEquipment()
     {
-        _currentPage = 10;
+        //_currentPage = 10;
         Refresh();
     }
     
     public void OnClickIndex()
     {
-        _currentPage = 0;
+        GoToIndex(BallardJournalIndexType.Index);
         Refresh();
     }
 
@@ -74,6 +79,7 @@ public class BallardJournal : MonoBehaviour
     [SerializeField] private BallardJournalLocalItem _ballardJournalLocalItem;
     [SerializeField] private BallardJournalPartyItem _ballardJournalPartyItem;
     [SerializeField] private List<Transform> _areaRoots;
+    [SerializeField] private List<BallardJournalIndex> _indexs = new List<BallardJournalIndex>();
 
     private int _currentPage = 0;
     private int _lastPage;
@@ -100,8 +106,31 @@ public class BallardJournal : MonoBehaviour
             _ballardJournalItems[_currentPage + 1].Show();
         });
         SpecDataManager.instance.Init(this);
+    }
 
+    // 목차 바로 가기
+    private void GoToIndex(BallardJournalIndexType type)
+    {
+        _ballardJournalItems[_currentPage].Hide();
+        _ballardJournalItems[_currentPage + 1].Hide();
 
+        switch (type)
+        {
+            case BallardJournalIndexType.Index:
+                _currentPage = _indexs.Find(x => x.indexType == BallardJournalIndexType.Index).page;
+                break;
+            case BallardJournalIndexType.Local:
+                _currentPage = _indexs.Find(x => x.indexType == BallardJournalIndexType.Local).page;
+                break;
+            default:
+                break;
+        }
+
+        if (_currentPage % 2 == 1)
+            _currentPage--;
+
+        _ballardJournalItems[_currentPage].Show();
+        _ballardJournalItems[_currentPage + 1].Show();
     }
 
     // 책 내용 생성

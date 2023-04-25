@@ -715,6 +715,11 @@ MonoBehaviour:
   _areaRoots:
   - {fileID: 754504314}
   - {fileID: 2141760477}
+  _indexs:
+  - indexType: 0
+    page: 0
+  - indexType: 1
+    page: 3
 --- !u!1 &668935524
 GameObject:
   m_ObjectHideFlags: 0
