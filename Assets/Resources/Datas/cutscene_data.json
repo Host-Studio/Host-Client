@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "reference_visit": 1000000,
+    "reference_type": 0,
+    "dialogue_location": 0,
+    "cutscene_dialogue_group_id": 2000
+  },
+  {
+    "id": 2,
+    "reference_visit": 1000000,
+    "reference_type": 0,
+    "dialogue_location": 1,
+    "cutscene_dialogue_group_id": 2001
+  }
+]

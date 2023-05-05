@@ -11,12 +11,32 @@
   },
   {
     "id": 2,
-    "res_name": "dialoguedb_data",
-    "type": "DialogueDBData"
+    "res_name": "dialogue_data",
+    "type": "DialogueData"
   },
   {
     "id": 3,
-    "res_name": "visitdb_data",
-    "type": "VisitDBData"
+    "res_name": "visit_data",
+    "type": "VisitData"
+  },
+  {
+    "id": 4,
+    "res_name": "adventurer_data",
+    "type": "AdventurerData"
+  },
+  {
+    "id": 5,
+    "res_name": "paperwork_data",
+    "type": "PaperworkData"
+  },
+  {
+    "id": 6,
+    "res_name": "reward_data",
+    "type": "RewardData"
+  },
+  {
+    "id": 7,
+    "res_name": "token_data",
+    "type": "TokenData"
   }
 ]

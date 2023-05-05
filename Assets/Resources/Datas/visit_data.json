@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1000000,
+    "adventurer_id": 12345,
+    "encounter_type": "랜덤",
+    "purpose_type": "신원서",
+    "encounter_reputation": "길드",
+    "reputation_count": 0,
+    "dialogue_type": 0,
+    "group_id": 1000,
+    "reward_id": 0,
+    "recipe_id": 0
+  },
+  {
+    "id": 1000001,
+    "adventurer_id": 12345,
+    "encounter_type": "메인",
+    "purpose_type": "요리",
+    "encounter_reputation": "제국",
+    "reputation_count": 0,
+    "dialogue_type": 0,
+    "group_id": 1001,
+    "reward_id": 0,
+    "recipe_id": 0
+  },
+  {
+    "id": 1000002,
+    "adventurer_id": 12345,
+    "encounter_type": "서브",
+    "purpose_type": "장비",
+    "encounter_reputation": "부족",
+    "reputation_count": 0,
+    "dialogue_type": 0,
+    "group_id": 2000,
+    "reward_id": 0,
+    "recipe_id": 0
+  }
+]

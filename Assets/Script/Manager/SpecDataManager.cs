@@ -12,22 +12,32 @@ public class SpecDataManager
     /////////////////// public
     public static readonly SpecDataManager instance = new SpecDataManager();
 
-    public UnityEvent<string, float> onDataLoadComplete = new UnityEvent<string, float>();
-    public UnityEvent onDataLoadFinished = new UnityEvent();
+    public UnityEvent<string, float>    onDataLoadComplete = new UnityEvent<string, float>();
+    public UnityEvent                   onDataLoadFinished = new UnityEvent();
 
-    public List<CutsceneDBData> CutsceneDBDatas => _cutsceneDBDatas;
-    public List<CutscenGroupData> CutscenGroupDatas => _cutscenGroupDatas;
-    public List<DialogueDBData> DialogueDBDatas => _dialogueDBDatas;
-    public List<VisitDBData> VisitDBDatas => _visitDBDatas;
+    public List<CutsceneDBData>     CutsceneDBDatas     => _cutsceneDBDatas;
+    public List<CutscenGroupData>   CutscenGroupDatas   => _cutscenGroupDatas;
+    public List<DialogueData>       DialogueDBDatas     => _dialogueDBDatas;
+    public List<VisitData>          VisitDBDatas        => _visitDBDatas;
+    public List<RewardData>         RewardDBDatas       => _rewardDBDatas;
+    public List<AdventurerData>     AdventurerDBDatas   => _adventurerDBDatas;
+    public List<PaperworkData>      PaperworkDBDatas    => _paperworkDBDatas;
 
 
 
     /////////////////// private
-    private List<DatapathData> _dataPaths = new List<DatapathData>();
-    private List<CutsceneDBData> _cutsceneDBDatas = new List<CutsceneDBData>();
-    private List<CutscenGroupData> _cutscenGroupDatas = new List<CutscenGroupData>();
-    private List<DialogueDBData> _dialogueDBDatas = new List<DialogueDBData>();
-    private List<VisitDBData> _visitDBDatas = new List<VisitDBData>();
+    private List<DatapathData>      _dataPaths          = new List<DatapathData>();
+    private List<CutsceneDBData>    _cutsceneDBDatas    = new List<CutsceneDBData>();
+    private List<CutscenGroupData>  _cutscenGroupDatas  = new List<CutscenGroupData>();
+
+    // Á¢°´
+    private List<VisitData>         _visitDBDatas       = new List<VisitData>();
+    private List<DialogueData>      _dialogueDBDatas    = new List<DialogueData>();
+    private List<PaperworkData>     _paperworkDBDatas   = new List<PaperworkData>();
+    private List<AdventurerData>    _adventurerDBDatas  = new List<AdventurerData>();
+    private List<RewardData>        _rewardDBDatas      = new List<RewardData>();
+    private List<TokenData>         _tokenDBDatas       = new List<TokenData>();
+
 
     private SpecDataManager()
     {
@@ -89,12 +99,32 @@ public class SpecDataManager
         path = string.Format("Datas/{0}", _dataPaths[2].res_name);
         req = Resources.LoadAsync<TextAsset>(path);
         asset = (TextAsset)req.asset;
-        _dialogueDBDatas = JsonConvert.DeserializeObject<DialogueDBData[]>(asset.text).ToList();
+        _dialogueDBDatas = JsonConvert.DeserializeObject<DialogueData[]>(asset.text).ToList();
 
         path = string.Format("Datas/{0}", _dataPaths[3].res_name);
         req = Resources.LoadAsync<TextAsset>(path);
         asset = (TextAsset)req.asset;
-        _visitDBDatas = JsonConvert.DeserializeObject<VisitDBData[]>(asset.text).ToList();
+        _visitDBDatas = JsonConvert.DeserializeObject<VisitData[]>(asset.text).ToList();
+
+        path = string.Format("Datas/{0}", _dataPaths[4].res_name);
+        req = Resources.LoadAsync<TextAsset>(path);
+        asset = (TextAsset)req.asset;
+        _adventurerDBDatas = JsonConvert.DeserializeObject<AdventurerData[]>(asset.text).ToList();
+
+        path = string.Format("Datas/{0}", _dataPaths[5].res_name);
+        req = Resources.LoadAsync<TextAsset>(path);
+        asset = (TextAsset)req.asset;
+        _paperworkDBDatas = JsonConvert.DeserializeObject<PaperworkData[]>(asset.text).ToList();
+
+        path = string.Format("Datas/{0}", _dataPaths[6].res_name);
+        req = Resources.LoadAsync<TextAsset>(path);
+        asset = (TextAsset)req.asset;
+        _rewardDBDatas = JsonConvert.DeserializeObject<RewardData[]>(asset.text).ToList();
+
+        path = string.Format("Datas/{0}", _dataPaths[7].res_name);
+        req = Resources.LoadAsync<TextAsset>(path);
+        asset = (TextAsset)req.asset;
+        _tokenDBDatas = JsonConvert.DeserializeObject<TokenData[]>(asset.text).ToList();
 
         yield return null;
         this.onDataLoadFinished.Invoke();

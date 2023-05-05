@@ -1,0 +1,50 @@
+[
+  {
+    "id": 3000000,
+    "local_id": 5010000,
+    "party_id": null,
+    "text_id": null,
+    "class_id": null,
+    "token_id": null
+  },
+  {
+    "id": 3000001,
+    "local_id": null,
+    "party_id": null,
+    "text_id": null,
+    "class_id": null,
+    "token_id": null
+  },
+  {
+    "id": 3000002,
+    "local_id": null,
+    "party_id": null,
+    "text_id": null,
+    "class_id": null,
+    "token_id": null
+  },
+  {
+    "id": 3000003,
+    "local_id": null,
+    "party_id": null,
+    "text_id": null,
+    "class_id": null,
+    "token_id": null
+  },
+  {
+    "id": 3000004,
+    "local_id": null,
+    "party_id": null,
+    "text_id": null,
+    "class_id": null,
+    "token_id": null
+  },
+  {
+    "id": 3000005,
+    "local_id": null,
+    "party_id": null,
+    "text_id": null,
+    "class_id": null,
+    "token_id": null
+  }
+]

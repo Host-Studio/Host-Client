@@ -47,7 +47,7 @@ public class StoryMain : SceneMain
 
 
     /////////////////// private
-    List<DialogueDBData> _dialogueDBDatas;
+    List<DialogueData> _dialogueDBDatas;
 
 
     private void Update()

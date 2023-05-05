@@ -1,0 +1,240 @@
+[
+  {
+    "id": 2010000,
+    "item_name": "수상한 단지",
+    "item_type": 0,
+    "flavor_text_id": 2011000,
+    "price": 0
+  },
+  {
+    "id": 2010001,
+    "item_name": "전단지",
+    "item_type": 0,
+    "flavor_text_id": 2011001,
+    "price": 0
+  },
+  {
+    "id": 2010002,
+    "item_name": "단원 명단",
+    "item_type": 0,
+    "flavor_text_id": 2011002,
+    "price": 0
+  },
+  {
+    "id": 2020000,
+    "item_name": "건식 전투식량 블럭",
+    "item_type": 1,
+    "flavor_text_id": 2021000,
+    "price": 1
+  },
+  {
+    "id": 2020001,
+    "item_name": "노래하는 옥수수",
+    "item_type": 1,
+    "flavor_text_id": 2021001,
+    "price": 1
+  },
+  {
+    "id": 2020002,
+    "item_name": "굽은 뿔 산양 위장 주머니",
+    "item_type": 1,
+    "flavor_text_id": 2021002,
+    "price": 1
+  },
+  {
+    "id": 2020003,
+    "item_name": "별바라기",
+    "item_type": 1,
+    "flavor_text_id": 2021003,
+    "price": 1
+  },
+  {
+    "id": 2020004,
+    "item_name": "밀가루 반죽",
+    "item_type": 1,
+    "flavor_text_id": 2021004,
+    "price": 1
+  },
+  {
+    "id": 2020005,
+    "item_name": "비스킷 반죽",
+    "item_type": 1,
+    "flavor_text_id": 2021005,
+    "price": 1
+  },
+  {
+    "id": 2020006,
+    "item_name": "망치새 알",
+    "item_type": 1,
+    "flavor_text_id": 2021006,
+    "price": 1
+  },
+  {
+    "id": 2020007,
+    "item_name": "오브리제 VII 시약",
+    "item_type": 1,
+    "flavor_text_id": 2021007,
+    "price": 1
+  },
+  {
+    "id": 2020008,
+    "item_name": "마늘",
+    "item_type": 1,
+    "flavor_text_id": 2021008,
+    "price": 1
+  },
+  {
+    "id": 2020009,
+    "item_name": "화살촉 새우",
+    "item_type": 1,
+    "flavor_text_id": 2021009,
+    "price": 1
+  },
+  {
+    "id": 2020010,
+    "item_name": "도둑문어",
+    "item_type": 1,
+    "flavor_text_id": 2021010,
+    "price": 1
+  },
+  {
+    "id": 2020011,
+    "item_name": "당근",
+    "item_type": 1,
+    "flavor_text_id": 2021011,
+    "price": 1
+  },
+  {
+    "id": 2020012,
+    "item_name": "와이번 뼈",
+    "item_type": 1,
+    "flavor_text_id": 2021012,
+    "price": 1
+  },
+  {
+    "id": 2020013,
+    "item_name": "면 반죽",
+    "item_type": 1,
+    "flavor_text_id": 2021013,
+    "price": 1
+  },
+  {
+    "id": 2020014,
+    "item_name": "토마토",
+    "item_type": 1,
+    "flavor_text_id": 2021014,
+    "price": 1
+  },
+  {
+    "id": 2020015,
+    "item_name": "코카트리스 알",
+    "item_type": 1,
+    "flavor_text_id": 2021015,
+    "price": 1
+  },
+  {
+    "id": 2020016,
+    "item_name": "걸어다니는버섯",
+    "item_type": 1,
+    "flavor_text_id": 2021016,
+    "price": 1
+  },
+  {
+    "id": 2020017,
+    "item_name": "바실리크 다리살",
+    "item_type": 1,
+    "flavor_text_id": 2021017,
+    "price": 1
+  },
+  {
+    "id": 2020018,
+    "item_name": "양파",
+    "item_type": 1,
+    "flavor_text_id": 2021018,
+    "price": 1
+  },
+  {
+    "id": 2020019,
+    "item_name": "곰 고기",
+    "item_type": 1,
+    "flavor_text_id": 2021019,
+    "price": 1
+  },
+  {
+    "id": 2020020,
+    "item_name": "람다 샤우팅 레드와인",
+    "item_type": 1,
+    "flavor_text_id": 2021020,
+    "price": 1
+  },
+  {
+    "id": 2020021,
+    "item_name": "쌀",
+    "item_type": 1,
+    "flavor_text_id": 2021021,
+    "price": 1
+  },
+  {
+    "id": 2020022,
+    "item_name": "설산 이끼",
+    "item_type": 1,
+    "flavor_text_id": 2021022,
+    "price": 1
+  },
+  {
+    "id": 2020023,
+    "item_name": "큰 어금니 멧돼지 고기",
+    "item_type": 1,
+    "flavor_text_id": 2021023,
+    "price": 1
+  },
+  {
+    "id": 2020024,
+    "item_name": "코카트리스 발",
+    "item_type": 1,
+    "flavor_text_id": 2021024,
+    "price": 1
+  },
+  {
+    "id": 2020025,
+    "item_name": "설산 와이번 고기",
+    "item_type": 1,
+    "flavor_text_id": 2021025,
+    "price": 1
+  },
+  {
+    "id": 2020026,
+    "item_name": "람다 카레 블록",
+    "item_type": 1,
+    "flavor_text_id": 2021026,
+    "price": 1
+  },
+  {
+    "id": 2020027,
+    "item_name": "감자",
+    "item_type": 1,
+    "flavor_text_id": 2021027,
+    "price": 1
+  },
+  {
+    "id": 2020028,
+    "item_name": "구멍풀 뿌리",
+    "item_type": 1,
+    "flavor_text_id": 2021028,
+    "price": 1
+  },
+  {
+    "id": 2020029,
+    "item_name": "와이번 알",
+    "item_type": 1,
+    "flavor_text_id": 2021029,
+    "price": 1
+  },
+  {
+    "id": 2020030,
+    "item_name": "저무는 달의 잎사귀",
+    "item_type": 1,
+    "flavor_text_id": 2021030,
+    "price": 1
+  }
+]

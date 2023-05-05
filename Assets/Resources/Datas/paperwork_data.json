@@ -1,0 +1,16 @@
+[
+  {
+    "id": 112233,
+    "name": "발라드",
+    "gender": "남성",
+    "species": "인간",
+    "local": "에르페",
+    "party_id": 5011002,
+    "party_name": "제국 기사단",
+    "class_id": 5012000,
+    "class_name": "전사",
+    "token_id": 5013002,
+    "toekn_tier": 3,
+    "token_img": "0"
+  }
+]

@@ -52,7 +52,7 @@ public class DataManager
         {
             Debug.Log("신규 유저 입니다.");
             _gameData = new GameData();
-            UserData = new UserData("0",0,0);
+            UserData = new UserData("0", 0, 0, 0, 0, 0, 0);
             _gameData.UserDatas.Add(UserData);
         }
         SaveGame();

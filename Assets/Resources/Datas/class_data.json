@@ -1,0 +1,212 @@
+[
+  {
+    "id": 5012000,
+    "local": "에르페",
+    "class": "전사",
+    "class_img": null
+  },
+  {
+    "id": 5012001,
+    "local": "에르페",
+    "class": "암살자",
+    "class_img": null
+  },
+  {
+    "id": 5012002,
+    "local": "에르페",
+    "class": "마법사",
+    "class_img": null
+  },
+  {
+    "id": 5012003,
+    "local": "에르페",
+    "class": "음유시인",
+    "class_img": null
+  },
+  {
+    "id": 5012004,
+    "local": "에르페",
+    "class": "사제",
+    "class_img": null
+  },
+  {
+    "id": 5012005,
+    "local": "에르페",
+    "class": "사냥꾼",
+    "class_img": null
+  },
+  {
+    "id": 5012006,
+    "local": "아인요르드",
+    "class": "전사",
+    "class_img": null
+  },
+  {
+    "id": 5012007,
+    "local": "아인요르드",
+    "class": "암살자",
+    "class_img": null
+  },
+  {
+    "id": 5012008,
+    "local": "아인요르드",
+    "class": "마법사",
+    "class_img": null
+  },
+  {
+    "id": 5012009,
+    "local": "아인요르드",
+    "class": "음유시인",
+    "class_img": null
+  },
+  {
+    "id": 5012010,
+    "local": "아인요르드",
+    "class": "점성술사",
+    "class_img": null
+  },
+  {
+    "id": 5012011,
+    "local": "아인요르드",
+    "class": "사냥꾼",
+    "class_img": null
+  },
+  {
+    "id": 5012012,
+    "local": "람다",
+    "class": "전사",
+    "class_img": null
+  },
+  {
+    "id": 5012013,
+    "local": "람다",
+    "class": "암살자",
+    "class_img": null
+  },
+  {
+    "id": 5012014,
+    "local": "람다",
+    "class": "마법사",
+    "class_img": null
+  },
+  {
+    "id": 5012015,
+    "local": "람다",
+    "class": "음유시인",
+    "class_img": null
+  },
+  {
+    "id": 5012016,
+    "local": "람다",
+    "class": "사제",
+    "class_img": null
+  },
+  {
+    "id": 5012017,
+    "local": "람다",
+    "class": "점성술사",
+    "class_img": null
+  },
+  {
+    "id": 5012018,
+    "local": "람다",
+    "class": "사냥꾼",
+    "class_img": null
+  },
+  {
+    "id": 5012019,
+    "local": "카리알굴",
+    "class": "전사",
+    "class_img": null
+  },
+  {
+    "id": 5012020,
+    "local": "카리알굴",
+    "class": "마법사",
+    "class_img": null
+  },
+  {
+    "id": 5012021,
+    "local": "카리알굴",
+    "class": "음유시인",
+    "class_img": null
+  },
+  {
+    "id": 5012022,
+    "local": "카리알굴",
+    "class": "사제",
+    "class_img": null
+  },
+  {
+    "id": 5012023,
+    "local": "카리알굴",
+    "class": "점성술사",
+    "class_img": null
+  },
+  {
+    "id": 5012024,
+    "local": "사몰레아",
+    "class": "암살자",
+    "class_img": null
+  },
+  {
+    "id": 5012025,
+    "local": "사몰레아",
+    "class": "마법사",
+    "class_img": null
+  },
+  {
+    "id": 5012026,
+    "local": "사몰레아",
+    "class": "음유시인",
+    "class_img": null
+  },
+  {
+    "id": 5012027,
+    "local": "사몰레아",
+    "class": "점성술사",
+    "class_img": null
+  },
+  {
+    "id": 5012028,
+    "local": "사몰레아",
+    "class": "사냥꾼",
+    "class_img": null
+  },
+  {
+    "id": 5012029,
+    "local": "오클리드",
+    "class": "전사",
+    "class_img": null
+  },
+  {
+    "id": 5012030,
+    "local": "오클리드",
+    "class": "암살자",
+    "class_img": null
+  },
+  {
+    "id": 5012031,
+    "local": "오클리드",
+    "class": "음유시인",
+    "class_img": null
+  },
+  {
+    "id": 5012032,
+    "local": "오클리드",
+    "class": "사제",
+    "class_img": null
+  },
+  {
+    "id": 5012033,
+    "local": "오클리드",
+    "class": "점성술사",
+    "class_img": null
+  },
+  {
+    "id": 5012034,
+    "local": "오클리드",
+    "class": "사냥꾼",
+    "class_img": null
+  }
+]
