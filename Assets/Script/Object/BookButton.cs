@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class BookButton : MonoBehaviour
 {
-    private Book book;
+    private Book_old book;
     [SerializeField] private int page;
 
     void Awake()
     {
-        book = GameObject.Find("CloseUpBook").GetComponent<Book>();
+        book = GameObject.Find("CloseUpBook").GetComponent<Book_old>();
         transform.GetComponent<Button>().onClick.AddListener(() => book.TurnOver(page));
     }
 

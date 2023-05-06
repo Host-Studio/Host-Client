@@ -1,4 +1,4 @@
-public enum BallardJournallItemType
+public enum BallardJournallPageType
 {
     None,
     Intro,

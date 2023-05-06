@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class BallardJournalLocalItem : BallardJournalItem
 {
-    [SerializeField] private Text _localNametext;
+    private string _localNametext;
 
-    public void Init(string localName)
+    public void Init(BallardJournallPageType type, string localName)
     {
-        _localNametext.text = localName;
+        _type = type;
+        _localNametext = localName;
     }
 
 }

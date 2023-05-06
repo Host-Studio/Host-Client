@@ -5,9 +5,16 @@ using UnityEngine;
 public class JeongTestMain : MonoBehaviour
 {
     public GameObject testGo;
+    public BallardJournal ballardJournal;
     // Start is called before the first frame update
     void Start()
     {
+        SpecDataManager.instance.onDataLoadFinished.AddListener(() =>
+        {
+            ballardJournal.Init();
+        });
+        SpecDataManager.instance.Init(this);
+
         
     }
 

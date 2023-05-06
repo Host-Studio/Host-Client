@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Book : MonoBehaviour, IPointerClickHandler
+public class Book_old : MonoBehaviour, IPointerClickHandler
 {
     private int curPage = 0;
     private GameObject leftObj = null, rightObj = null;

@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
 public class BallardJournalPartyItem : BallardJournalItem
 {
-    [SerializeField] private Text _partyNametext;
+    private string _partyName;
 
-    public void Init(string partyName)
+    public void Init(BallardJournallPageType type, string partyName)
     {
-        _partyNametext.text = partyName;
+        _type = type;
+        _partyName = partyName;
     }
 
 }
