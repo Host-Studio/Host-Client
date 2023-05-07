@@ -1,11 +1,15 @@
 public class BallardJournalPartyItem : BallardJournalItem
 {
-    private string _partyName;
+    public string PartyName
+    {
+        get;
+        private set;
+    }
 
     public void Init(BallardJournallPageType type, string partyName)
     {
         _type = type;
-        _partyName = partyName;
+        PartyName = partyName;
     }
 
 }

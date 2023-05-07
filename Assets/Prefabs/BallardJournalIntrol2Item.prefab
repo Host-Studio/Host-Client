@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 7828520808695343853}
   - component: {fileID: 7828520808695343855}
   - component: {fileID: 7828520808695343852}
-  - component: {fileID: 9046992811046892784}
   m_Layer: 5
   m_Name: BallardJournalIntrol2Item
   m_TagString: Untagged
@@ -233,20 +232,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9046992811046892784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7828520808695343850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c82f8fc6d9c09a4aa7fab64f8d74595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _page: 1
-  _type: 1
 --- !u!1 &7828520809068030137
 GameObject:
   m_ObjectHideFlags: 0
