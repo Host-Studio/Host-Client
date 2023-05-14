@@ -26,6 +26,7 @@ public class AutoFlip : MonoBehaviour
 
     public void FlipRightPage()
     {
+        Debug.Log(ControledBook.TotalPageCount);
         if (isFlipping) return;
         if (ControledBook.currentPage >= ControledBook.TotalPageCount-2) return;
         isFlipping = true;

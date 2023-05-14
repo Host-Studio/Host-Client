@@ -23,6 +23,7 @@ public class BallardJournal : MonoBehaviour {
 
     public Sprite temp1;
     public Sprite temp2;
+    public Sprite temp3;
     public List<Sprite> pageSpirtes;
     public bool interactable=true;
     public bool enableShadowEffect=true;
@@ -58,6 +59,7 @@ public class BallardJournal : MonoBehaviour {
     bool pageDragging = false;
     //current flip mode
     FlipMode mode;
+
 
     public void Init()
     {
@@ -279,19 +281,50 @@ public class BallardJournal : MonoBehaviour {
         _nextPageClip.rectTransform.pivot = new Vector2(0, 0.12f);
         _clippingPlane.rectTransform.pivot = new Vector2(1, 0.35f);
 
-        Left.gameObject.SetActive(true);
+        //Left.gameObject.SetActive(true);
+        _leftGo.gameObject.SetActive(true);
         Left.rectTransform.pivot = new Vector2(0, 0);
         Left.transform.position = RightNext.transform.position;
         Left.transform.eulerAngles = new Vector3(0, 0, 0);
-        Left.sprite = (currentPage < pageSpirtes.Count) ? pageSpirtes[currentPage+1] : background;
+
+        if (currentPage < pageSpirtes.Count)
+        {
+            _leftGo.Init(_pageInfos[currentPage + 1]);
+            _leftGo.Refresh();
+        }
+        else
+        {
+            _leftGo.ShowNoneImage();
+        }
+        //Left.sprite = (currentPage < pageSpirtes.Count) ? pageSpirtes[currentPage+1] : background;
         Left.transform.SetAsFirstSibling();
         
-        Right.gameObject.SetActive(true);
+        //Right.gameObject.SetActive(true);
+        _rightGo.gameObject.SetActive(true);
         Right.transform.position = RightNext.transform.position;
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
-        Right.sprite = (currentPage < pageSpirtes.Count - 2) ? pageSpirtes[currentPage + 2] : background;
 
-        RightNext.sprite = (currentPage < pageSpirtes.Count - 3) ? pageSpirtes[currentPage + 3] : background;
+        if(currentPage < pageSpirtes.Count - 2)
+        {
+            _rightGo.Init(_pageInfos[currentPage + 2]);
+            _rightGo.Refresh();
+        }
+        else
+        {
+            _rightGo.ShowNoneImage();
+        }
+        //Right.sprite = (currentPage < pageSpirtes.Count - 2) ? pageSpirtes[currentPage + 2] : background;
+
+        if(currentPage < pageSpirtes.Count - 3)
+        {
+            _rightNextGo.Init(_pageInfos[currentPage + 3]);
+            _rightNextGo.Refresh();
+        }
+        else
+        {
+            _rightNextGo.ShowNoneImage();
+        }
+        //RightNext.sprite = (currentPage < pageSpirtes.Count - 3) ? pageSpirtes[currentPage + 3] : background;
 
         LeftNext.transform.SetAsFirstSibling();
         if (enableShadowEffect) _shadow.gameObject.SetActive(true);
@@ -313,19 +346,44 @@ public class BallardJournal : MonoBehaviour {
         _nextPageClip.rectTransform.pivot = new Vector2(1, 0.12f);
         _clippingPlane.rectTransform.pivot = new Vector2(0, 0.35f);
 
-        Right.gameObject.SetActive(true);
+        //Right.gameObject.SetActive(true);
+        _rightGo.gameObject.SetActive(true);
         Right.transform.position = LeftNext.transform.position;
-        Right.sprite = pageSpirtes[currentPage];
+        _rightGo.Init(_pageInfos[currentPage]);
+        _rightGo.Refresh();
+       // Right.sprite = pageSpirtes[currentPage];
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
         Right.transform.SetAsFirstSibling();
 
-        Left.gameObject.SetActive(true);
+        //Left.gameObject.SetActive(true);
+        _leftGo.gameObject.SetActive(true);
         Left.rectTransform.pivot = new Vector2(1, 0);
         Left.transform.position = LeftNext.transform.position;
         Left.transform.eulerAngles = new Vector3(0, 0, 0);
-        Left.sprite = (currentPage >= 2) ? pageSpirtes[currentPage - 1] : background;
 
-        LeftNext.sprite = (currentPage >= 2) ? pageSpirtes[currentPage - 2] : background;
+        if(currentPage >= 2)
+        {
+            _leftGo.Init(_pageInfos[currentPage - 1]);
+            _leftGo.Refresh();
+        }
+        else
+        {
+            _leftGo.ShowNoneImage();
+        }
+        //Left.sprite = (currentPage >= 2) ? pageSpirtes[currentPage - 1] : background;
+
+        
+        if(currentPage >= 2)
+        {
+            _leftNextGo.Init(_pageInfos[currentPage - 2]);
+            _leftNextGo.Refresh();
+        }
+        else
+        {
+            _leftNextGo.ShowNoneImage();
+        }
+        //LeftNext.sprite = (currentPage >= 2) ? pageSpirtes[currentPage - 2] : background;
+        
 
         RightNext.transform.SetAsFirstSibling();
         if (enableShadowEffect) _shadowLTR.gameObject.SetActive(true);
@@ -360,8 +418,27 @@ public class BallardJournal : MonoBehaviour {
     Coroutine currentCoroutine;
     void UpdateSprites()
     {
-        LeftNext.sprite = (currentPage >= 0 && currentPage < pageSpirtes.Count) ? pageSpirtes[currentPage] : background;
-        RightNext.sprite = (currentPage >= 0 && currentPage < pageSpirtes.Count - 1) ? pageSpirtes[currentPage+1] : background;
+        if (currentPage >= 0 && currentPage < pageSpirtes.Count)
+        {
+            _leftNextGo.Init(_pageInfos[currentPage]);
+            _leftNextGo.Refresh();
+        }
+        else
+        {
+            _leftNextGo.ShowNoneImage();
+        }
+
+        if (currentPage >= 0 && currentPage < pageSpirtes.Count - 1)
+        {
+            _rightNextGo.Init(_pageInfos[currentPage+1]);
+            _rightNextGo.Refresh();
+        }
+        else 
+        {
+            _rightNextGo.ShowNoneImage();
+        }
+        //LeftNext.sprite = (currentPage >= 0 && currentPage < pageSpirtes.Count) ? pageSpirtes[currentPage] : background;
+        //RightNext.sprite = (currentPage >= 0 && currentPage < pageSpirtes.Count - 1) ? pageSpirtes[currentPage+1] : background;
     }
     public void TweenForward()
     {
@@ -449,10 +526,10 @@ public class BallardJournal : MonoBehaviour {
     [SerializeField] private Image Right;
     [SerializeField] private Image RightNext;
 
-    [SerializeField] private GameObject _leftGo;
-    [SerializeField] private GameObject _leftNextGo;
-    [SerializeField] private GameObject _rightGo;
-    [SerializeField] private GameObject _rightNextGo;
+    [SerializeField] private UIBallardJournalItem _leftGo;
+    [SerializeField] private UIBallardJournalItem _leftNextGo;
+    [SerializeField] private UIBallardJournalItem _rightGo;
+    [SerializeField] private UIBallardJournalItem _rightNextGo;
 
     private Dictionary<int, BallardJournalItem> _pageInfos = new Dictionary<int, BallardJournalItem>();
 
@@ -466,8 +543,9 @@ public class BallardJournal : MonoBehaviour {
         for (int idx = 0; idx < 4; idx++)
         {
             BallardJournalIntroItem item = new BallardJournalIntroItem();
-            item.Init(BallardJournallPageType.Intro);
+            item.Init(BallardJournallPageType.Intro, "INTRO" + idx, temp1);
             _pageInfos.Add(pageCount, item);
+            pageSpirtes.Add(temp1);
             pageCount++;
         }
 
@@ -476,9 +554,9 @@ public class BallardJournal : MonoBehaviour {
         foreach (var localData in SpecDataManager.instance.LocalDatas)
         {            
             BallardJournalLocalItem localItem = new BallardJournalLocalItem();
-            localItem.Init(BallardJournallPageType.Local, localData.local);
+            localItem.Init(BallardJournallPageType.Local, localData.local, temp2);
             _pageInfos.Add(pageCount, localItem);
-            pageSpirtes.Add(temp1);
+            pageSpirtes.Add(temp2);
             pageCount++;
 
 
@@ -487,8 +565,8 @@ public class BallardJournal : MonoBehaviour {
             foreach (var partyData in partyDatas)
             {
                 BallardJournalPartyItem partyItem = new BallardJournalPartyItem();
-                partyItem.Init(BallardJournallPageType.Local, partyData.party);
-                pageSpirtes.Add(temp2);
+                partyItem.Init(BallardJournallPageType.Party, partyData.party, temp3);
+                pageSpirtes.Add(temp3);
                 _pageInfos.Add(pageCount, partyItem);
                 pageCount++;
             }

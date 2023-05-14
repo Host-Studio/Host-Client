@@ -1,8 +1,17 @@
 
+using UnityEngine;
+
 public class BallardJournalIntroItem : BallardJournalItem
 {
-    public void Init(BallardJournallPageType type)
+    public string IntroName
     {
-        _type = type;
+        get;
+        private set;
+    }
+    public void Init(BallardJournallPageType type, string introName, Sprite icon)
+    {
+        Type = type;
+        IntroName = introName;
+        Icon = icon;
     }
 }

@@ -1,4 +1,6 @@
 
+using UnityEngine;
+
 public class BallardJournalLocalItem : BallardJournalItem
 {
     public string LocalName
@@ -7,10 +9,11 @@ public class BallardJournalLocalItem : BallardJournalItem
         private set;
     }
 
-    public void Init(BallardJournallPageType type, string localName)
+    public void Init(BallardJournallPageType type, string localName, Sprite icon)
     {
-        _type = type;
+        Type = type;
         LocalName = localName;
+        Icon = icon;
     }
 
 }

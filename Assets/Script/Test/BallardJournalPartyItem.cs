@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class BallardJournalPartyItem : BallardJournalItem
 {
     public string PartyName
@@ -6,10 +8,11 @@ public class BallardJournalPartyItem : BallardJournalItem
         private set;
     }
 
-    public void Init(BallardJournallPageType type, string partyName)
+    public void Init(BallardJournallPageType type, string partyName, Sprite icon)
     {
-        _type = type;
+        Type = type;
         PartyName = partyName;
+        Icon = icon;
     }
 
 }
